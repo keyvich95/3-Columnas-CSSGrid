@@ -1,0 +1,111 @@
+:root {
+    /* Colores Primarios */
+    --brightorange: hsl(31, 77%, 52%);
+    --darkcyan: hsl(184, 100%, 22%);
+    --verydarkcyan: hsl(179, 100%, 13%);
+    /* Colores Secundarios */
+    --transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --verylightgray: hsl(0, 0%, 95%);
+    /* Fuentes */
+    --fuenteL: 'Lexend Deca', sans-serif;
+    --fuenteB: 'Big Shoulders Display', cursive;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: var(--verylightgray);
+}
+
+.contenedor {
+    display: block;
+    max-width: 1200px;
+    width: 95%;
+    min-height: 400px;
+    margin: auto;
+    margin-top: 9%;
+    margin-bottom: 7%;
+    padding: 0;
+}
+.primera {
+    background-color: var(--brightorange);
+    border-radius: 7px 7px 0 0;
+}
+.segunda {
+    background-color: var(--darkcyan);
+}
+.tercera {
+    background-color: var(--verydarkcyan);
+    border-radius: 0 0 7px 7px;
+}
+img {
+    margin: 5rem 3rem 0 4rem;
+}
+.titulo {
+    color: var(--verylightgray);
+    font-family: var(--fuenteB);
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 4rem;
+    margin: 0;
+}
+.parrafo {
+    color: var(--transparentwhite);
+    font-family: var(--fuenteL);
+    width: 300px;
+    height: 200px;
+    line-height: 1.8;
+    font-size: 2.2rem;
+    text-align: left;
+    margin: 0 7rem 7rem 4rem;
+    overflow: auto;
+}
+input {
+    width: 160px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0;
+    font-family: var(--fuenteL);
+    font-size: 1.6rem;
+    background-color: var(--verylightgray);
+    margin: 0rem 4rem 4rem 4rem;
+}
+
+
+@media (min-width: 480px) {
+    .tres-col {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .primera {
+        border-radius: 1rem;
+    }
+    .segunda {
+        grid-column: 1/3;
+    }
+}
+@media (min-width: 768px) {
+    .tres-col {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .primera {
+        border-radius: 7px 0 0 7px;
+    }
+    .segunda {
+        grid-column: 2 / 3;
+    }
+    .tercera {
+        border-radius: 0 7px 7px 0;
+    }
+}
